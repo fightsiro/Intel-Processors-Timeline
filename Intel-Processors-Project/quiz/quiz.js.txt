@@ -1,0 +1,41 @@
+const questions = [
+    {
+        question: "Какой процессор ввел суперскалярную архитектуру?",
+        answers: ["8086", "Pentium", "Core i7"],
+        correct: 1
+    },
+    {
+        question: "Сколько ядер у Alder Lake?",
+        answers: ["8", "16", "24"],
+        correct: 2
+    }
+];
+
+let currentQuestion = 0;
+
+function showQuestion() {
+    const q = questions[currentQuestion];
+    document.getElementById('question').innerHTML = q.question;
+    
+    let answersHTML = "";
+    q.answers.forEach((answer, index) => {
+        answersHTML += <button onclick="checkAnswer(${index})">${answer}</button>;
+    });
+    document.getElementById('answers').innerHTML = answersHTML;
+}
+
+function checkAnswer(selected) {
+    if (selected === questions[currentQuestion].correct) {
+        alert("Правильно!");
+    } else {
+        alert("Неверно!");
+    }
+}
+
+document.getElementById('next').addEventListener('click', () => {
+    currentQuestion++;
+    if (currentQuestion >= questions.length) currentQuestion = 0;
+    showQuestion();
+});
+
+showQuestion();

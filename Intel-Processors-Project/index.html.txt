@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Эволюция процессоров Intel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>От 8086 до Alder Lake</h1>
+    </header>
+
+    <!-- Лента времени -->
+    <section id="timeline">
+        <div class="event">
+            <img src="images/8086.jpg" alt="Intel 8086">
+            <h3>Intel 8086 (1978)</h3>
+            <p>16-битная архитектура, 29 тыс. транзисторов.</p>
+        </div>
+        <!-- Добавьте другие процессоры -->
+    </section>
+
+    <!-- График роста транзисторов -->
+    <section id="graph">
+        <canvas id="transistorsChart"></canvas>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
