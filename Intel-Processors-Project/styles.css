@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f0f4f8;
+}
+
+header {
+    background: #0071C5;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.timeline-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 2rem;
+}
+
+.event {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    min-width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.event img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#transistorsChart {
+    max-width: 800px;
+    margin: 2rem auto;
+}
